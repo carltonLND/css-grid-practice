@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  padding: 20px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-rows: repeat(3, [row-start] 120px [row-end]);
+  grid-template-columns: repeat(4, [col-start] 120px [col-end]);
+  gap: 5px;
+  border-radius: 5px;
+  background: white;
+  width: 495px;
+  padding: 5px;
+  box-shadow: 7px 7px 8px 5px gray;
+}
+
+.featureBlock {
+  color: orange;
+  grid-column: col-start 3 / col-end 4;
+  grid-row: row-start 2;
+  text-align: center;
+  line-height: 120px;
+}
+
+.verticalBlock {
+  background: orange;
+  color: white;
+  grid-row: row-start 1 / row-end 2;
+  text-align: center;
+  transform: rotate(180deg);
+  writing-mode: vertical-lr;
+  text-align: center;
+  line-height: 120px;
+}
+
+.cell {
+  background: lightskyblue;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 120px;
+  font-size: 50px;
+}
